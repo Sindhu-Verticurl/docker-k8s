@@ -20,3 +20,8 @@ jobs:
         VALIDATE_ALL_CODEBASE: false
         DEFAULT_BRANCH: main
         GITHUB_TOKEN: ${{ secrets.SINDHU_TOKEN }}
+    - name: java-setup
+      uses: actions/setup-java@v3
+      with:
+       distribution: 'temurin'
+       java-version: '17'
