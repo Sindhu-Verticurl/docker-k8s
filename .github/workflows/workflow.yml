@@ -21,6 +21,11 @@ jobs:
         DEFAULT_BRANCH: main
         GITHUB_TOKEN: ${{ secrets.SINDHU_TOKEN }}
         
+    - name: Initialize CodeQL
+      uses: github/codeql-action/init@v2
+      with:
+        languages: java
+        
     - name: java-setup
       uses: actions/setup-java@v3
       with:
